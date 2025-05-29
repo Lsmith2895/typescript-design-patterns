@@ -3,8 +3,10 @@ import { MinimalistLayout, WorkspaceBuilder, type LayoutStyle } from "./RealWorl
 
 function PatternView () {
     const potentialOfficeItems = ['Desk', 'TrashCan', "Computer", "Keyboard", "Mouse", "Decorations"]
-    const [builder] = useState(() => new WorkspaceBuilder(new MinimalistLayout))
+    const minimalistLayout = new MinimalistLayout;
+    const [builder] = useState(() => new WorkspaceBuilder(minimalistLayout))
     const [displayedItems, setDisplayedItems] = useState<string[]>([])
+
 
     const handleLayoutChange = (layout: LayoutStyle) => {
         builder.setLayoutStyle(layout);
@@ -16,13 +18,16 @@ function PatternView () {
             <h1>
                 Strategy Pattern
             </h1>
-            <button onClick={() => { handleLayoutChange(new MinimalistLayout) }} >
+            <button onClick={() => { handleLayoutChange(minimalistLayout) }} >
                 Minimalist Layout
             </ button >
-            {/* Create a new button to display the Productive Layout */}
+            {/* Create a new button here to display the Productive Layout */}
             <div>
                 {displayedItems.map((i) => {
-                    return (<div> {i}</div>)
+                    return (
+                        <div key={i}>
+                            {i}
+                        </div>)
                 })}
             </div>
         </>
