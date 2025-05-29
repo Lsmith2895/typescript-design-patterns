@@ -43,14 +43,14 @@ class ConcreteStrategyB implements Strategy {
 
 // Basic Sorting Strategy
 const sortStrategy = new ConcreteStrategyA
-const sortContext = new Context(sortStrategy)
+const context = new Context(sortStrategy)
 console.log('basic sorting strategy');
-sortContext.doSomeBusinessLogic();
+context.doSomeBusinessLogic();
 
 // Reverse Sorting Strategy
 const reverseStrategy = new ConcreteStrategyB
-const reverseContext = new Context(reverseStrategy)
+context.setStrategy(reverseStrategy)
 console.log('reverse sorting strategy')
-reverseContext.doSomeBusinessLogic();
+context.doSomeBusinessLogic();
 
 export { Context as AcademicStrategyPattern }
