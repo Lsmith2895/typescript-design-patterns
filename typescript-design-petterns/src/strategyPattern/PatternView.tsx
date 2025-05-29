@@ -19,7 +19,7 @@ function PatternView () {
             <button onClick={() => { handleLayoutChange(new MinimalistLayout) }} >
                 Minimalist Layout
             </ button >
-            {/* Create a new button to display the Prodictive Layout */}
+            {/* Create a new button to display the Productive Layout */}
             <div>
                 {displayedItems.map((i) => {
                     return (<div> {i}</div>)
