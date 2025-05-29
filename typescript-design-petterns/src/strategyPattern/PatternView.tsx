@@ -16,8 +16,9 @@ function PatternView () {
     return (
         <>
             <h1>
-                Strategy Pattern
+                The Strategy Pattern
             </h1>
+            <p> </p>
             <button onClick={() => { handleLayoutChange(minimalistLayout) }} >
                 Minimalist Layout
             </ button >
