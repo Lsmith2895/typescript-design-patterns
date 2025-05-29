@@ -1,16 +1,21 @@
 #!/usr/bin/env node
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-// Convert input to camelCase (naive version)
+// __dirname replacement for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+
+// Convert input to camelCase
 function toCamelCase(str) {
   return str
     .replace(/[-_ ]+([a-zA-Z])/g, (_, char) => char.toUpperCase())
     .replace(/^[A-Z]/, (char) => char.toLowerCase());
 }
 
-// Find the root of the project (has package.json and src/)
+// Find the root of the project
 function findProjectRoot(currentDir) {
   let dir = currentDir;
 
@@ -26,7 +31,6 @@ function findProjectRoot(currentDir) {
   return dir;
 }
 
-// Main script logic
 function main() {
   const inputName = process.argv[2];
 
@@ -37,7 +41,7 @@ function main() {
   }
 
   const patternName = toCamelCase(inputName);
-  const projectRoot = findProjectRoot(process.cwd());
+  const projectRoot = findProjectRoot(__dirname);
   const srcPath = path.join(projectRoot, 'src');
   const patternPath = path.join(srcPath, patternName);
 
