@@ -1,12 +1,11 @@
 import './App.css'
-import { ObserverPatternView } from './observerPattern/PatternView'
+import { DecoratorPatternView } from './decoratorPattern/PatternView'
 
 function App() {
 
   return (
     <>
-      {/* <PatternView /> */}
-      <ObserverPatternView />
+      <DecoratorPatternView />
     </>
   )
 }
