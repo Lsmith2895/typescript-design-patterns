@@ -1,11 +1,11 @@
 import './App.css'
-import { DecoratorPatternView } from './decoratorPattern/PatternView'
+import { ThemeFactoryView } from './factoryPattern/PatternView'
 
 function App() {
 
   return (
     <>
-      <DecoratorPatternView />
+      <ThemeFactoryView />
     </>
   )
 }
