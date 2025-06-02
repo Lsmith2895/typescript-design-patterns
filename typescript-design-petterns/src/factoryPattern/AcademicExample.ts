@@ -1,3 +1,7 @@
+interface Product {
+    operation(): string;
+}
+
 abstract class Creator {
     public abstract factoryMethod(): Product;
 
@@ -19,9 +23,6 @@ class ConcreteCreator2 extends Creator {
     }
 }
 
-interface Product {
-    operation(): string;
-}
 
 class ConcreteProduct1 implements Product {
     public operation(): string {
