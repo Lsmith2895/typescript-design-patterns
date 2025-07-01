@@ -1,5 +1,4 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import './App.css'
 import { DecoratorPatternView } from './decoratorPattern/PatternView'
 import { HomePage } from './HomePage'
 import { ThemeFactoryView } from './factoryPattern/PatternView'
