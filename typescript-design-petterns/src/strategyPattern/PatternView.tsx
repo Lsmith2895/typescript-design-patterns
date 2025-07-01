@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { MinimalistLayout, WorkspaceBuilder, type LayoutStyle } from "./RealWorldExample"
 
-function PatternView () {
+function StrategyPatternView () {
     const potentialOfficeItems = ['Desk', 'TrashCan', "Computer", "Keyboard", "Mouse", "Decorations"]
     const minimalistLayout = new MinimalistLayout;
     const [builder] = useState(() => new WorkspaceBuilder(minimalistLayout))
@@ -35,4 +35,4 @@ function PatternView () {
     )
 }
 
-export { PatternView }
+export { StrategyPatternView }
