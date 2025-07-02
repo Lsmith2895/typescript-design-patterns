@@ -4,7 +4,7 @@ function NavBar() {
     return (
         // things we need on the nav bar:
         // Logo Icon, home, about, patterns as a drop down? 
-        <nav>
+        <nav className="flex space-x-1.5 text-3xl border-2 border-gray-500 p-3.5 m-1 rounded-lg font-bold bg-blue-400 justify-between">
             <Link to="/" >
                 Home
             </Link>
